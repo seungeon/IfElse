@@ -1,8 +1,13 @@
+var count;
+
+
 function setup()
 {
 	createCanvas(800,600);
 	noFill();
 	stroke(fill(225,mouseY*225/320,mouseY*225/210));
+
+	count=0;
 }
 
 
@@ -10,7 +15,7 @@ function draw()
 {
 	background(0);
 	fill(Math.random() * 255,Math.random() * 255,Math.random() * 255,Math.random() * 255);
-	ellipse(mouseX,mouseY,50,50)
+	ellipse(mouseX,mouseY,50,50);
 
 	if (mouseX < 100) {
 		fill(220,20,60);
@@ -38,7 +43,11 @@ function draw()
 	    rect(40,130,10,30);
 	    rect(30,150,10,10);
 
-	} else if (mouseX < 200){
+	} 
+
+
+
+	else if (mouseX < 200){
 		fill(255,215,0);
 		stroke(255,215,0);
 		rect(120,90,40,40);
@@ -91,4 +100,11 @@ function draw()
 		rect(140,130,10,20);	  
 		rect(130,140,10,10);
 	}
+
+
+      ellipse(count,100,10,10);
+      count=count+1;
+      if(count>600){
+      	count=0;
+      }
 }
