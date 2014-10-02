@@ -12,5 +12,8 @@ function draw()
 	fill(Math.random() * 255,Math.random() * 255,Math.random() * 255,Math.random() * 255);
 	ellipse(mouseX,mouseY,50,50)
 
+if (mouseX < 300) {
+  ellipse(200, 200, 100, 100);
+}
 
 }
